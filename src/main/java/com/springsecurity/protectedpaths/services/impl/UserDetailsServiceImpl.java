@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service("userDetailsServiceImpl")
 public class UserDetailsServiceImpl implements UserDetailsService, UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
