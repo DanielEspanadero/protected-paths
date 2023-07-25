@@ -34,10 +34,8 @@ public class UserDetailsServiceImpl implements UserDetailsService, UserService {
 
     @Override
     public void registerUser(User user) {
-        // Encriptar la contraseña antes de guardar el usuario
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
-
         userRepository.save(user);
     }
 
